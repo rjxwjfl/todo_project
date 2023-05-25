@@ -1,3 +1,3 @@
 import 'package:intl/intl.dart';
 
-DateFormat todoTime = DateFormat("a hh:mm");
+DateFormat todoTime = DateFormat("~ hh:mm a");

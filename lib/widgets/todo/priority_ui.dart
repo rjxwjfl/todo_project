@@ -10,28 +10,49 @@ class PriorityUI extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text(todoTime.format(DateTime.now()), style: const TextStyle(fontSize: 13,fontWeight: FontWeight.w500, letterSpacing: -1.0),),
+        Text(
+          todoTime.format(DateTime.now()),
+          style: const TextStyle(fontSize: 14, letterSpacing: -1.0, fontFamily: "Swagger"),
+        ),
         Container(
-          width:50.0,
+          width: 50.0,
           height: 50.0,
-          decoration: BoxDecoration(
-            border: Border.all(color: Colors.black54)
+          decoration: BoxDecoration(border: Border.all(color: Colors.black54)),
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                const Text("중요도", style: TextStyle(fontSize: 10, fontWeight: FontWeight.w400, letterSpacing: -1.5),),
+                priorityString(priority)
+              ],
+            )
           ),
-          child: Center(child: priorityString(priority)),
         ),
       ],
     );
   }
 
   Text priorityString(int priority) {
-    const map = {
-      1: Text("L", style: TextStyle(fontSize: 32, fontWeight: FontWeight.w700, color: Colors.black54),),
-      2: Text("M", style: TextStyle(fontSize: 32, fontWeight: FontWeight.w700, color: Colors.black54),),
-      3: Text("H", style: TextStyle(fontSize: 32, fontWeight: FontWeight.w700, color: Colors.greenAccent),),
-      4: Text("I", style: TextStyle(fontSize: 32, fontWeight: FontWeight.w700, color: Colors.orange),),
-      5: Text("E", style: TextStyle(fontSize: 32, fontWeight: FontWeight.w700, color: Colors.redAccent),)
+    TextStyle defaultStyle = const TextStyle(fontSize: 32, fontWeight: FontWeight.w400, color: Colors.black54, fontFamily: "Swagger", letterSpacing: -1.5);
+    var map = {
+      1: Text( "낮음",
+        style: defaultStyle,
+      ),
+      2: Text("중간",
+        style: defaultStyle,
+      ),
+      3: Text("높음",
+        style: defaultStyle,
+      ),
+      4: const Text("중요",
+        style: TextStyle(fontSize: 32, fontWeight: FontWeight.w400, color: Colors.orange, fontFamily: "Swagger", letterSpacing: -1.5),
+      ),
+      5: const Text("긴급",
+        style: TextStyle(fontSize: 32, fontWeight: FontWeight.w400, color: Colors.redAccent, fontFamily: "Swagger", letterSpacing: -1.5),
+      )
     };
 
-    return map[priority]?? const Text("");
+    return map[priority] ?? const Text("");
   }
 }

@@ -9,6 +9,7 @@ class TodoViewUI extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    TextStyle headLineStyle = TextStyle(fontWeight: FontWeight.bold);
     return InkWell(
       onTap: () {},
       // splashColor: Colors.transparent,
@@ -25,9 +26,10 @@ class TodoViewUI extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("Title"),
+                  Text("Title", style: headLineStyle,),
                   Text("Description"),
-                  Text("writer"),
+                  SizedBox(height: 5.0,),
+                  Text("발신 : ", style: TextStyle(fontSize: 10.0),),
                 ],
               ),
             ),
