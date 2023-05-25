@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo_project/widgets/todo/date_indicator.dart';
 import 'package:todo_project/widgets/todo/todo_view_ui.dart';
 
 class AppMain extends StatelessWidget {
@@ -15,7 +16,17 @@ class AppMain extends StatelessWidget {
       ),
       body: Column(
         children: [
-          TodoViewUI(callback: (){},)
+          DateIndicator(),
+          TodoViewUI(callback: (){}, priority: 1,),
+          Divider(),
+          TodoViewUI(callback: (){},priority: 2,),
+          Divider(),
+          TodoViewUI(callback: (){},priority: 3,),
+          Divider(),
+          TodoViewUI(callback: (){},priority: 4,),
+          Divider(),
+          TodoViewUI(callback: (){},priority: 5,),
+          Divider(),
         ],
       ),
     );
