@@ -1,4 +1,24 @@
 CREATE TABLE task_mst (
   task_id INT AUTO_INCREMENT PRIMARY KEY,
-  cu_id INT NOT NULL
+  cu_id INT NOT NULL,
+  task_title TEXT,
+  task_desc TEXT,
+  periodic TINYINT(1) NOT NULL DEFAULT 0,
+  create_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  update_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE task_dtl (
+  task_dtl_id INT AUTO_INCREMENT PRIMARY KEY,
+  task_id INT NOT NULL,
+  period INT,
+  task_freq INT,
+  start_date TIMESTAMP,
+  end_date TIMESTAMP
+);
+
+CREATE TABLE task_mbr (
+  task_mbr_id INT AUTO_INCREMENT PRIMARY KEY,
+  task_id INT NOT NULL,
+  user_id INT NOT NULL
 );
