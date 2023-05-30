@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/date_symbol_data_local.dart';
+import 'package:todo_project/utils/local_notification.dart';
 import 'package:todo_project/utils/scroll_glow_remover.dart';
 import 'package:todo_project/views/app_main.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  LocalNotification.initialize();
   await initializeDateFormatting();
   await SystemChrome.setPreferredOrientations(
     <DeviceOrientation>[
@@ -33,6 +35,7 @@ class AppInit extends StatelessWidget {
       theme: ThemeData(fontFamilyFallback: const ["QuickSand", "NotoSans"]),
       title: "ToDo Giver",
       scrollBehavior: ScrollGlowRemover(),
+      debugShowCheckedModeBanner: false,
       home: const SafeArea(top: false, bottom: false, child: AppMain()),
     );
   }

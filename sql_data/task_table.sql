@@ -1,0 +1,4 @@
+CREATE TABLE task_mst (
+  task_id INT AUTO_INCREMENT PRIMARY KEY,
+  cu_id INT NOT NULL
+);
