@@ -1,6 +1,7 @@
 CREATE TABLE group_mst (
   grp_id INT AUTO_INCREMENT PRIMARY KEY,
   grp_mu_id INT NOT NULL,
+  grp_ctg_id INT NOT NULL,
   create_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   update_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
@@ -36,4 +37,9 @@ CREATE TABLE group_role_mst (
   grp_role_id INT AUTO_INCREMENT PRIMARY KEY,
   role_lvl INT NOT NULL,
   role_name VARCHAR(10)
+);
+
+CREATE TABLE group_category (
+  grp_ctg_id INT AUTO_INCREMENT PRIMARY KEY,
+  ctg_code INT NOT NULL
 );
