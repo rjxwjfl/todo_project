@@ -1,6 +1,7 @@
 CREATE TABLE task_mst (
   task_id INT AUTO_INCREMENT PRIMARY KEY,
   cu_id INT NOT NULL,
+  mu_id INT NOT NULL,
   task_title TEXT,
   task_desc TEXT,
   periodic TINYINT(1) NOT NULL DEFAULT 0,
