@@ -2,13 +2,14 @@ CREATE TABLE user_mst (
   user_id INT AUTO_INCREMENT PRIMARY KEY,
   username VARCHAR(50) NOT NULL UNIQUE,
   password VARCHAR(100) NOT NULL,
-  device_token TEXT
+  device_token TEXT,
+  fb_uid TEXT
 );
 
 CREATE TABLE user_dtl (
   user_dtl_id INT AUTO_INCREMENT PRIMARY KEY,
   user_id INT NOT NULL,
-  display_name VARCHAR(60),
+  display_name VARCHAR(60), -- procedure// user_mst.username -> user_dtl.display_name
   user_info TEXT,
   image_url TEXT,
   contact VARCHAR(20),

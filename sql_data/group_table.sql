@@ -18,7 +18,7 @@ CREATE TABLE group_user (
   grp_user_id INT AUTO_INCREMENT PRIMARY KEY,
   grp_id INT NOT NULL,
   user_id INT NOT NULL,
-  role_id INT NOT NULL,
+  grp_role_id INT NOT NULL,
   create_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -36,8 +36,9 @@ CREATE TABLE group_task (
 
 CREATE TABLE group_role_mst (
   grp_role_id INT AUTO_INCREMENT PRIMARY KEY,
+  grp_id INT NOT NULL,
   role_lvl INT NOT NULL,
-  role_name VARCHAR(10)
+  role_name VARCHAR(20)
 );
 
 CREATE TABLE group_category (
