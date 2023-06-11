@@ -25,13 +25,11 @@ class CustomBottomNavigationBar extends ConsumerWidget {
         },
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-              icon: FaIcon(FontAwesomeIcons.house), label: "Home"),
+              icon: FaIcon(FontAwesomeIcons.house), label: "홈"),
           BottomNavigationBarItem(
-              icon: FaIcon(FontAwesomeIcons.calendarCheck), label: "ToDo"),
+              icon: FaIcon(FontAwesomeIcons.listCheck), label: "일정"),
           BottomNavigationBarItem(
-              icon: FaIcon(FontAwesomeIcons.users), label: "Do With"),
-          BottomNavigationBarItem(
-              icon: FaIcon(FontAwesomeIcons.commentDots), label: "쪽지함"),
+              icon: FaIcon(FontAwesomeIcons.commentDots), label: "수신함"),
           BottomNavigationBarItem(
               icon: FaIcon(FontAwesomeIcons.gears), label: "설정"),
         ],

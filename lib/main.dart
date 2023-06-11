@@ -5,7 +5,7 @@ import 'package:intl/date_symbol_data_local.dart';
 import 'package:todo_project/riverpod/main_route_navigator/main_route_navigator.dart';
 import 'package:todo_project/utils/local_notification.dart';
 import 'package:todo_project/utils/scroll_glow_remover.dart';
-import 'package:todo_project/views/navi_home/navi_home.dart';
+import 'package:todo_project/views/navi_home.dart';
 
 final mainRoute = ChangeNotifierProvider((ref) => MainRouteNavigator());
 
