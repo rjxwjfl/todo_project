@@ -37,12 +37,6 @@ class NaviHome extends ConsumerWidget {
           FocusManager.instance.primaryFocus!.unfocus();
         },
         child: Scaffold(
-          appBar: AppBar(
-            title: const Text("title"),
-            elevation: 1.0,
-            backgroundColor: Colors.white,
-            foregroundColor: Colors.black54,
-          ),
           body: PageView(
             controller: refs.pageController,
             physics: const NeverScrollableScrollPhysics(),

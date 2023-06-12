@@ -29,6 +29,8 @@ class CustomBottomNavigationBar extends ConsumerWidget {
           BottomNavigationBarItem(
               icon: FaIcon(FontAwesomeIcons.listCheck), label: "일정"),
           BottomNavigationBarItem(
+              icon: FaIcon(FontAwesomeIcons.peopleLine), label: "그룹"),
+          BottomNavigationBarItem(
               icon: FaIcon(FontAwesomeIcons.commentDots), label: "수신함"),
           BottomNavigationBarItem(
               icon: FaIcon(FontAwesomeIcons.gears), label: "설정"),

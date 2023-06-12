@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:todo_project/views/group/group_main.dart';
 import 'package:todo_project/views/home/home_screen.dart';
-import 'package:todo_project/views/todo/todo_main.dart';
+import 'package:todo_project/views/inbox/inbox_main.dart';
+import 'package:todo_project/views/schedule/schedule_main.dart';
+import 'package:todo_project/views/settings/settings_main.dart';
 
 class MainRouteNavigator extends ChangeNotifier {
   late int _selectedIndex = 0;
@@ -8,7 +11,10 @@ class MainRouteNavigator extends ChangeNotifier {
   late String _title;
   final List<Widget> routes = const [
     HomeScreen(),
-    TodoMain()
+    ScheduleMain(),
+    GroupMain(),
+    InboxMain(),
+    SettingsMain()
   ];
 
   MainRouteNavigator() {

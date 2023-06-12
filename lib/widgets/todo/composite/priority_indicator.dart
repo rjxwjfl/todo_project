@@ -16,7 +16,7 @@ class PriorityIndicator extends StatelessWidget {
         ),
         Container(
           width: 50.0,
-          height: 50.0,
+          height: 62.0,
           decoration: BoxDecoration(
               color: priority == 5 ? Colors.red : Colors.transparent,
               border: Border.all(color: Colors.black54)),
@@ -27,7 +27,11 @@ class PriorityIndicator extends StatelessWidget {
               children: [
                 Text(
                   "중요도",
-                  style: TextStyle(fontSize: 10, fontWeight: FontWeight.w400, color: priority == 5? Colors.white: Colors.black54,letterSpacing: -1.5),
+                  style: TextStyle(
+                      fontSize: 10,
+                      fontWeight: FontWeight.w400,
+                      color: priority == 5 ? Colors.white : Colors.black54,
+                      letterSpacing: -1.5),
                 ),
                 priorityString(priority)
               ],
@@ -40,7 +44,11 @@ class PriorityIndicator extends StatelessWidget {
 
   Text priorityString(int priority) {
     TextStyle defaultStyle = const TextStyle(
-        fontSize: 32, fontWeight: FontWeight.w400, color: Colors.black54, fontFamily: "Swagger", letterSpacing: -1.5);
+        fontSize: 32,
+        fontWeight: FontWeight.w400,
+        color: Colors.black54,
+        fontFamily: "Swagger",
+        letterSpacing: -1.5);
     var map = {
       1: Text(
         "낮음",
@@ -57,12 +65,20 @@ class PriorityIndicator extends StatelessWidget {
       4: const Text(
         "중요",
         style: TextStyle(
-            fontSize: 32, fontWeight: FontWeight.w400, color: Colors.orange, fontFamily: "Swagger", letterSpacing: -1.5),
+            fontSize: 32,
+            fontWeight: FontWeight.w400,
+            color: Colors.orange,
+            fontFamily: "Swagger",
+            letterSpacing: -1.5),
       ),
       5: const Text(
         "긴급",
         style: TextStyle(
-            fontSize: 32, fontWeight: FontWeight.w400, color: Colors.white, fontFamily: "Swagger", letterSpacing: -1.5),
+            fontSize: 32,
+            fontWeight: FontWeight.w400,
+            color: Colors.white,
+            fontFamily: "Swagger",
+            letterSpacing: -1.5),
       )
     };
 
